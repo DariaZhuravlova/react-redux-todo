@@ -1,7 +1,7 @@
 // react
 import type { FC } from 'react';
 // components
-import { Avatar } from '../avatar';
+import { Avatar } from '../Avatar';
 // libs
 import clsx from 'clsx';
 // styles

@@ -4,8 +4,8 @@ import { useState, useRef } from 'react';
 //hooks
 import { useClickOutside } from '@/shared/libs/hooks/useClickOutside';
 //components
-import { Dropdown } from '@/shared/ui/dropdown';
-import { Input } from '@/shared/ui/input';
+import { Dropdown } from '@/shared/ui/Dropdown';
+import { Input } from '@/shared/ui/Input';
 import { SelectOptionList } from '../SelectOptionList/SelectOptionList';
 import { SelectPickedOption } from '../SelectPickedOption/SelectPickedOption';
 //assets
