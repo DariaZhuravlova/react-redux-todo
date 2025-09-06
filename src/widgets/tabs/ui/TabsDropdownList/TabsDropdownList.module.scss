@@ -1,0 +1,13 @@
+@use '@/app/styles/mixins/index' as mixins;
+@use '@/app/styles/variables/global' as vars;
+
+.dropdownOptionsWrapper {
+    background-color: vars.$white;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 2px;
+
+    & div {
+        border: none !important;
+    }
+}

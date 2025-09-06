@@ -1,0 +1,72 @@
+@use '@/app/styles/variables/global' as *;
+
+.Todo {
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: $todo-color-title;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+// .addButton {
+//     background-color: $todo-bg-accent;
+//     color: $todo-white;
+//     font-size: 20px;
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//     border: none;
+//     cursor: pointer;
+// }
+
+// .select {
+//     padding: 8px 12px;
+//     border: 1px solid #ccc;
+//     border-radius: 8px;
+//     font-size: 16px;
+//     background-color: $todo-bg-select;
+//     color: #333;
+//     cursor: pointer;
+    
+// }
+
+// .select:focus {
+//     outline: none;
+// }
+
+// .totalTasks {
+//   font-size: 20px;
+//   color: #777;
+// }
+
+// .clearButton {
+//   background-color: $todo-bg-accent;
+//   color: white;
+//   border: none;
+//   border-radius: 6px;
+//   padding: 6px 12px;
+//   font-size: 20px;
+//   cursor: pointer;
+//   transition: background-color 0.2s ease;
+
+//   &:hover {
+//     background-color: $error-600;
+//   }
+// }
+
+

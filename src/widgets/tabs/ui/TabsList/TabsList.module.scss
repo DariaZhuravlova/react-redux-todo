@@ -1,0 +1,37 @@
+@use '@/app/styles/mixins/index' as mixins;
+@use '@/app/styles/variables/global' as vars;
+
+.tabsWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    &.size32 {
+        height: 32px;
+    }
+
+    &.size36 {
+        height: 36px;
+    }
+
+    &.size40 {
+        height: 40px;
+    }
+
+    &.scrollable {
+        overflow-x: auto;
+    }
+
+    &.dropdown {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &.arrows {
+        overflow-x: hidden;
+    }
+}

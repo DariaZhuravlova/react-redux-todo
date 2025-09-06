@@ -1,0 +1,16 @@
+@use '@/app/styles/variables/global' as *;
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: $todo-bg-select;
+  color: #333;
+  cursor: pointer;
+  
+}
+
+.select:focus {
+  outline: none;
+}

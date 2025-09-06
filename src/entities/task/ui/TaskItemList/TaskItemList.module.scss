@@ -1,0 +1,17 @@
+@use '@/app/styles/variables/global' as *;
+
+.TaskItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: $todo-bg-2;
+  border-radius: 5px;
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 16px;
+}

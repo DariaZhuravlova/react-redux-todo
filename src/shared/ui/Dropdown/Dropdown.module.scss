@@ -1,0 +1,35 @@
+@use '@/app/styles/variables/global' as *;
+
+.dropdown {
+    width: 100%;
+    background: $bg-primary;
+    border: 1px solid $border-primary;
+    border-radius: 8px;
+    padding: 4px 0;
+    box-shadow: 0px 4px 12px #10182808;
+    z-index: 10;
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: $bg-secondary_active transparent;
+
+    // Chrome, Safari, Edge
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $bg-secondary_active;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: $bg-secondary_active transparent;
+}

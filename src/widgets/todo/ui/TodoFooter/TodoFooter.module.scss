@@ -1,0 +1,28 @@
+@use '@/app/styles/variables/global' as *;
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.totalTasks {
+  font-size: 20px;
+  color: #777;
+}
+
+.clearButton {
+  background-color: $todo-bg-accent;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $error-600;
+  }
+}
+

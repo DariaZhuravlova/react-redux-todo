@@ -1,0 +1,71 @@
+@use '@/app/styles/variables/global' as *;
+
+.TaskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: $todo-white;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: $todo-bg-accent;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+
+.date {
+    font-size: 12px;
+    color: #888;
+}
+
+.completed .text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.completed .date {
+    color: #bbb;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit,
+.delete {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit:hover,
+.delete:hover {
+    background-color: #ddd;
+}

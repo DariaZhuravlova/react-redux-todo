@@ -1,0 +1,207 @@
+@use '@/app/styles/variables/global.scss' as *;
+
+.inputWrapper {
+    min-width: 245px;
+    // max-width: 323px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    &.labelRight {
+        .inputBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // max-width: 245px;
+
+            .inputContainer {
+                min-width: 64px;
+                max-width: 64px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    // width: 100%;
+    min-width: 323px;
+    flex-wrap: wrap;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid $border-primary;
+    background-color: $bg-primary;
+    min-width: 100%;
+
+    input {
+        background-color: transparent;
+        flex-grow: 1;
+        width: 100%;
+        min-width: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &:focus-within {
+        border-color: $border-brand;
+        outline: 4px solid $color-focus-outline;
+    }
+
+    .inputWrapper.labelRight {
+        &.hideFocus {
+            .inputContainer:focus-within {
+                border-color: inherit;
+                outline: none;
+            }
+        }
+    }
+
+    &.fill {
+        background-color: $bg-primary;
+        border: 1px solid $border-primary;
+    }
+
+    &.outline {
+        background-color: transparent;
+        border: 1px solid $border-primary;
+    }
+
+    &.quiet {
+        border-color: transparent;
+
+        &:hover {
+            border: 1px solid $border-primary;
+        }
+    }
+}
+
+.icon {
+    color: $text-placeholder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size24 {
+    height: 24px;
+    font-size: 12px;
+}
+
+.size32 {
+    height: 32px;
+    font-size: 12px;
+}
+
+.size36 {
+    height: 36px;
+    font-size: 12px;
+}
+
+.size40 {
+    min-height: 40px;
+    font-size: 14px;
+}
+
+.size48 {
+    height: 48px;
+    font-size: 14px;
+}
+
+.labelContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $text-primary;
+}
+
+.helperText {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-tertiary;
+}
+
+.badge {
+    border: 1px solid $border-secondary;
+    border-radius: 4px;
+    // width: 32px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-secondary;
+    background: $bg-secondary;
+    text-align: center;
+    padding: 0 6px;
+}
+
+.inputWrapper {
+    &.error {
+        .inputContainer {
+            border-color: $border-error;
+
+            &:focus-within {
+                outline: 4px solid $color-danger-outline;
+            }
+        }
+
+        .icon {
+            color: $text-error-primary;
+        }
+
+        .helperText {
+            color: $text-error-primary;
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        .inputContainer {
+            border-color: $text-disabled;
+            outline: none;
+        }
+
+        .label {
+            color: $text-secondary_hover;
+        }
+
+        .helperText {
+            color: $text-disabled;
+        }
+
+        .placeholder {
+            color: $text-disabled;
+        }
+
+        .icon {
+            color: $text-disabled;
+        }
+    }
+}
+
+.required {
+    color: $text-error-primary;
+}

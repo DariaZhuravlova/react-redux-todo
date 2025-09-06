@@ -1,0 +1,93 @@
+@use '@/app/styles/mixins/index' as mixins;
+@use '@/app/styles/variables/global' as vars;
+
+.tabItemWrapper {
+    @include mixins.flexContainer();
+    font-family: 'Inter', sans-serif;
+    padding: 0px 8px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+
+    &.size32 .tabItem {
+        @include mixins.text12(600);
+        height: 29px;
+        overflow: hidden;
+    }
+
+    &.size36 .tabItem {
+        @include mixins.text14(600);
+        height: 33px;
+    }
+
+    &.size40 .tabItem {
+        @include mixins.text14(600);
+        height: 37px;
+    }
+
+    & .tabItem {
+        background-color: transparent;
+        cursor: pointer;
+        text-wrap: nowrap;
+        overflow: hidden;
+        color: vars.$gray-900;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .tabBadge {
+        @include mixins.flexContainer();
+        @include mixins.text12(500);
+
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+        justify-content: center;
+        border: 1px solid vars.$gray-200;
+        border-radius: 4px;
+        color: vars.$gray-900;
+        background-color: vars.$gray-50;
+    }
+
+    &.active {
+        border-bottom: 2px solid vars.$brand-600;
+
+        & .tabItem {
+            color: vars.$brand-600;
+        }
+
+        & .tabBadge {
+            border-color: vars.$brand-200;
+            color: vars.$brand-600;
+            background-color: vars.$brand-50;
+        }
+
+        &.underlineFilled {
+            background-color: vars.$brand-50;
+
+            &.disabled {
+                background-color: transparent;
+            }
+        }
+
+        &.disabled {
+            border: none;
+        }
+    }
+
+    &.disabled {
+        & .tabItem {
+            cursor: not-allowed;
+            color: vars.$gray-300;
+        }
+
+        & .tabBadge {
+            border-color: vars.$gray-300;
+            color: vars.$gray-300;
+            background-color: transparent;
+        }
+    }
+
+    &.itemHover:hover {
+        background-color: vars.$gray-50;
+    }
+}

@@ -1,0 +1,42 @@
+@use '@/app/styles/mixins/index' as mixins;
+@use '@/app/styles/variables/global' as vars;
+
+.icon {
+    @include mixins.flexCenter(row);
+    height: 100%;
+    cursor: pointer;
+
+    &.size32 {
+        width: 32px;
+    }
+
+    &.size36 {
+        width: 36px;
+    }
+
+    &.size40 {
+        width: 40px;
+    }
+
+    &.rotate {
+        transform: rotate(180deg);
+    }
+    &.gap {
+        margin-left: 40px;
+    }
+
+    &.active {
+        img {
+            filter: brightness(0) saturate(100%) invert(27%) sepia(94%)
+                saturate(7497%) hue-rotate(209deg) brightness(99%)
+                contrast(101%);
+        }
+    }
+    &:hover {
+        img {
+            filter: brightness(0) saturate(100%) invert(27%) sepia(94%)
+                saturate(7497%) hue-rotate(209deg) brightness(99%)
+                contrast(101%);
+        }
+    }
+}

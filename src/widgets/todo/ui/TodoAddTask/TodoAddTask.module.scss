@@ -1,0 +1,11 @@
+@use '@/app/styles/variables/global' as *;
+
+.addButton {
+  background-color: $todo-bg-accent;
+  color: $todo-white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

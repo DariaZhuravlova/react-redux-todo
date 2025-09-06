@@ -1,0 +1,669 @@
+@use '@/app/styles/variables/global' as *;
+
+.button {
+  max-width: 152px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:disabled {
+    background-color: $bg-secondary_hover;
+    color: $border-disabled;
+    cursor: not-allowed;
+  }
+
+  &.loading {
+    cursor: progress;
+  }
+}
+
+.loadingIcon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 3.33px;
+  height: 3.33px;
+  background-color: currentColor;
+  border-radius: 50%;
+  animation: blink 1.5s infinite ease-in-out;
+
+  &.dotFade {
+    opacity: 0.4;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.shapeRectangle {
+  border-radius: 0px;
+}
+
+.shapeRounded {
+  border-radius: 4px;
+}
+
+.shapePill {
+  border-radius: 9999px;
+}
+
+.size32 {
+  font-size: 12px;
+  padding: 8px 14px;
+  line-height: 16px;
+  height: 32px;
+}
+
+.size36 {
+  font-size: 13px;
+  padding: 8px 14px;
+  line-height: 20px;
+  height: 36px;
+}
+
+.size40 {
+  font-size: 14px;
+  padding: 8px 14px;
+  line-height: 24px;
+  height: 40px;
+}
+
+.size44 {
+  font-size: 14px;
+  padding: 10px 14px;
+  line-height: 24px;
+  height: 44px;
+}
+
+.size48 {
+  font-size: 14px;
+  padding: 12px 18px;
+  line-height: 24px;
+  height: 48px;
+}
+
+.size56 {
+  font-size: 14px;
+  padding: 16px 22px;
+  line-height: 24px;
+  height: 56px;
+}
+
+.fillAccent {
+  color: $text-white;
+  // background-color: $color-accent;
+
+  &:hover {
+    background-color: $bg-brand-solid_hover;
+  }
+
+  &:active {
+    background-color: $bg-brand-section;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-brand-solid_hover;
+    outline: 4px solid $color-accent-outline;
+  }
+
+}
+
+.fillPrimary {
+  color: $text-white;
+  background-color: $bg-primary-solid;
+
+  &:hover {
+    background-color: $text-secondary;
+  }
+
+  &:active {
+    background-color: $text-primary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $text-secondary;
+    outline: 4px solid $bg-primary-solid-outline;
+  }
+
+}
+
+.fillSecondary {
+  color: $bg-primary-solid;
+  background-color: $bg-secondary_hover;
+
+  &:hover {
+    background-color: $bg-secondary_active;
+  }
+
+  &:active {
+    background-color: $border-disabled;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $text-disabled;
+    outline: 4px solid $bg-secondary_hover-outline;
+  }
+
+}
+
+.fillSuccess {
+  color: $text-white;
+  background-color: $bg-success-solid;
+
+  &:hover {
+    background-color: $utility-success-700;
+  }
+
+  &:active {
+    background-color: $utility-success-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $utility-success-700;
+    outline: 4px solid $color-success-outline;
+  }
+
+}
+
+.fillDanger {
+  color: $text-white;
+  background-color: $bg-error-solid;
+
+  &:hover {
+    background-color: $utility-error-700;
+  }
+
+  &:active {
+    background-color: $utility-error-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $utility-error-700;
+    outline: 4px solid $color-danger-outline;
+  }
+
+}
+
+.fillWarning {
+  color: $text-white;
+  background-color: $bg-warning-solid;
+
+  &:hover {
+    background-color: $utility-warning-700;
+  }
+
+  &:active {
+    background-color: $utility-warning-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $utility-warning-700;
+    outline: 4px solid $color-warning-outline;
+  }
+
+}
+
+// outline button
+
+.outlineAccent {
+  color: $text-brand-tertiary;
+  background-color: $bg-primary;
+  border: 1px solid $text-quaternary_on-brand;
+
+  &:hover {
+    background-color: $bg-brand-primary;
+  }
+
+  &:active {
+    background-color: $bg-brand-secondary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-brand-primary;
+    outline: 4px solid $color-accent-outline;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+.outlinePrimary {
+  color: $text-primary;
+  background-color: $bg-primary;
+  border: 1px solid $bg-primary-solid;
+
+  &:hover {
+    background-color: $bg-secondary;
+  }
+
+  &:active {
+    background-color: $bg-secondary_hover;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-secondary;
+    outline: 4px solid $bg-primary-solid-outline;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+.outlineSecondary {
+  color: $text-tertiary;
+  background-color: $bg-primary;
+  border: 1px solid $border-disabled;
+
+  &:hover {
+    background-color: $bg-secondary;
+    color: $bg-primary-solid;
+  }
+
+  &:active {
+    background-color: $bg-secondary_hover;
+    color: $bg-primary-solid;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-secondary;
+    color: $bg-primary-solid;
+    outline: 4px solid $bg-secondary_hover-outline;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+.outlineSuccess {
+  color: $text-success-primary;
+  background-color: $bg-primary;
+  border: 1px solid $utility-success-300;
+
+  &:hover {
+    background-color: $bg-success-primary;
+    color: $utility-success-700;
+  }
+
+  &:active {
+    background-color: $bg-success-secondary;
+    color: $utility-success-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-success-primary;
+    color: $utility-success-700;
+    outline: 4px solid $color-success-outline;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+.outlineDanger {
+  color: $text-error-primary;
+  background-color: $bg-primary;
+  border: 1px solid $border-error;
+
+  &:hover {
+    background-color: $bg-error-primary;
+    color: $utility-error-700;
+  }
+
+  &:active {
+    background-color: $bg-error-secondary;
+    color: $utility-error-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-error-primary;
+    outline: 4px solid $color-danger-outline;
+    color: $utility-error-700;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+.outlineWarning {
+  color: $text-warning-primary;
+  background-color: $bg-primary;
+  border: 1px solid $utility-warning-300;
+
+  &:hover {
+    background-color: $bg-warning-primary;
+    color: $utility-warning-700;
+  }
+
+  &:active {
+    background-color: $bg-warning-secondary;
+    color: $utility-warning-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-warning-primary;
+    outline: 4px solid $color-danger-outline;
+    color: $utility-warning-700;
+  }
+
+  &:disabled {
+    border-color: $border-disabled;
+  }
+
+}
+
+// ghost button
+
+.ghostAccent {
+  color: $text-brand-secondary;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-brand-primary;
+    color: $bg-brand-section;
+  }
+
+  &:active {
+    background-color: $bg-brand-secondary;
+    color: $bg-brand-section;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-brand-primary;
+    outline: 4px solid $color-accent-outline;
+    color: $text-primary;
+  }
+
+}
+
+.ghostPrimary {
+  color: $text-primary;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-primary-solid;
+    color: $bg-secondary_subtle;
+  }
+
+  &:active {
+    background-color: $text-primary;
+    color: $bg-secondary_subtle;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-primary-solid;
+    outline: 4px solid $bg-primary-solid-outline;
+    color: $bg-secondary_subtle;
+  }
+
+}
+
+.ghostSecondary {
+  color: $text-primary;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-secondary_hover;
+    color: $bg-primary-solid;
+  }
+
+  &:active {
+    background-color: $bg-secondary_active;
+    color: $bg-primary-solid;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-secondary_hover;
+    outline: 4px solid $bg-secondary_hover-outline;
+    color: $bg-primary-solid;
+  }
+
+}
+
+.ghostSuccess {
+  color: $utility-success-900;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-success-primary;
+    color: $utility-success-700;
+  }
+
+  &:active {
+    background-color: $bg-success-secondary;
+    color: $utility-success-700;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-success-primary;
+    outline: 4px solid $color-success-outline;
+    color: $utility-success-700;
+  }
+
+}
+
+.ghostDanger {
+  color: $utility-error-700;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-error-primary;
+    color: $utility-error-800;
+  }
+
+  &:active {
+    background-color: $bg-error-primary;
+    color: $utility-error-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-error-primary;
+    outline: 4px solid $color-danger-outline;
+    color: $utility-error-800;
+  }
+
+}
+
+.ghostWarning {
+  color: $utility-warning-700;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-warning-primary;
+    color: $utility-warning-800;
+  }
+
+  &:active {
+    background-color: $bg-warning-primary;
+    color: $utility-warning-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $bg-warning-primary;
+    outline: 4px solid $color-warning-outline;
+    color: $utility-warning-800;
+  }
+
+}
+
+// text button
+
+.textAccent {
+  color: $text-brand-tertiary;
+  background-color: transparent;
+
+  &:hover {
+    color: $text-brand-secondary;
+  }
+
+  &:active {
+    color: $bg-brand-section;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $color-accent-outline;
+    color: $text-brand-secondary;
+  }
+
+}
+
+.textPrimary {
+  color: $text-primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $text-secondary_hover;
+  }
+
+  &:active {
+    color: $text-tertiary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $bg-primary-solid-outline;
+    color: $text-secondary_hover;
+  }
+
+}
+
+.textSecondary {
+  color: $text-secondary_hover;
+  background-color: transparent;
+
+  &:hover {
+    color: $text-tertiary;
+  }
+
+  &:active {
+    color: $text-secondary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $bg-secondary_hover-outline;
+    color: $text-tertiary;
+  }
+
+}
+
+.textSuccess {
+  color: $text-success-primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $utility-success-700;
+  }
+
+  &:active {
+    color: $utility-success-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $color-success-outline;
+    color: $utility-success-700;
+  }
+
+}
+
+.textDanger {
+  color: $text-error-primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $utility-error-700;
+  }
+
+  &:active {
+    color: $utility-error-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $color-danger-outline;
+    color: $utility-error-700;
+  }
+
+}
+
+.textWarning {
+  color: $text-warning-primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $utility-warning-700;
+  }
+
+  &:active {
+    color: $utility-warning-800;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px solid $color-warning-outline;
+    color: $utility-warning-700;
+  }
+
+}

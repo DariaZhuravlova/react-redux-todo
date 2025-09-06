@@ -1,0 +1,12 @@
+@mixin flexContainer($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+@mixin flexCenter($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}

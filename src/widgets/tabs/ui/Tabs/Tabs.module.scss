@@ -1,0 +1,44 @@
+@use '@/app/styles/mixins/index' as mixins;
+@use '@/app/styles/variables/global' as vars;
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .tabsWrapper {
+        @include mixins.flexContainer(row);
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid vars.$gray-300;
+
+        &.size32 {
+            height: 31px;
+        }
+
+        &.size36 {
+            height: 35px;
+        }
+
+        &.size40 {
+            height: 39px;
+        }
+    }
+
+    .dropdownPosition {
+        width: 200px;
+        position: absolute;
+        bottom: -4px;
+        right: 0;
+        transform: translateY(50%);
+        text-align: center;
+        margin-left: auto;
+        z-index: 1;
+    }
+
+    .content {
+        @include mixins.flexCenter(row);
+        width: 100%;
+        height: 100px;
+    }
+}

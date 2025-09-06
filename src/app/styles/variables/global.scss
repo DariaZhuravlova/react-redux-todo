@@ -1,0 +1,117 @@
+// Text color
+$text-primary: #1a1a1e; //gray-900
+$text-primary_on-brand: #ffffff; //white
+$text-secondary: #3f3f46; //gray-700
+$text-secondary_hover: #70707b; //gray-800
+$text-secondary_on-brand: #b2ddff; //brand-200
+$text-tertiary: #51525c; //gray-600
+$text-tertiary_hover: #3f3f46; //gray-700
+$text-tertiary_on-brand: #b2ddff; //brand-200
+$text-quaternary: #70707b; //gray-500
+$text-quaternary_on-brand: #84caff; //brand-300
+$text-white: #ffffff; //text-white
+$text-disabled: #d1d1d6; //gray-300
+$text-placeholder: #a0a0ab; //gray-500
+$text-placeholder_subtle: #d1d1d6; //gray-300
+$text-brand-primary: #194185; //brand-900
+$text-brand-secondary: #175cd3; //brand-700
+$text-brand-tertiary: #1570ef; //brand-600
+$text-brand-tertiary_alt: #1570ef; //brand-600
+$text-error-primary: #d92d20; //error-600
+$text-warning-primary: #dc6803; //warning-600
+$text-success-primary: #079455; //success-600
+
+// Border color
+$border-primary: #d1d1d6; //gray-300
+$border-secondary: #e4e4e7; //gray-200
+$border-tertiary: #f2f2f2; //gray-100
+$border-disabled: #d1d1d6; //gray-300
+$border-disabled_subtle: #e4e4e7; //gray-200
+$border-brand: #84caff; //brand-300
+$border-brand-solid: #1570ef; //brand-600
+$border-brand-solid_alt: #1570ef; //brand-600
+$border-error: #fda29b; //error-300
+$border-error-solid: #d92d20; //error-600
+
+// Background color
+$bg-primary: #ffffff; //white
+$bg-primary_alt: #ffffff; //white
+$bg-primary_hover: #fafafa; //gray-50
+$bg-primary_active: #fafafa; //gray-100
+$bg-primary-solid: #26272b; //gray-950
+$bg-secondary: #fafafa; //gray-50
+$bg-secondary_alt: #fafafa; //gray-50
+$bg-secondary_hover: #f2f2f2; //gray-100
+$bg-secondary_active: #e4e4e7; //gray-200
+$bg-secondary_subtle: #fcfcfc; //gray-25
+$bg-secondary-solid: #51525c; //gray-600
+$bg-tertiary: #f2f2f2; //gray-100
+$bg-quaternary: #e4e4e7; //gray-200
+$bg-active: #fafafa; //gray-50
+$bg-disabled: #f2f2f2; //gray-100
+$bg-disabled_subtle: #f2f2f2; //gray-50
+$bg-overlay: #131316; //gray-950
+$bg-brand-primary: #eff8ff; //brand-50
+$bg-brand-secondary: #d1e9ff; //brand-100
+$bg-brand-solid: #1570ef; //brand-600
+$bg-brand-solid_hover: #175cd3; //brand-700
+$bg-brand-section: #1849a9; //brand-800
+$bg-brand-section_subtle: #175cd3; //brand-700
+$bg-error-primary: #fef3f2; //error-50
+$bg-error-secondary: #fee4e2; //error-100
+$bg-error-solid: #d92d20; //error-600
+$bg-warning-primary: #fffaeb; //warning-50
+$bg-warning-secondary: #fef0c7; //warning-100
+$bg-warning-solid: #dc6803; //warning-600
+$bg-success-primary: #ecfdf3; //success-50
+$bg-success-secondary: #dcfae6; //success-100
+$bg-success-solid: #079455; //success-600
+
+// utility colors
+$utility-success-300: #75e0a7; //success-300
+$utility-success-500: #17b26a; //success-500
+$utility-success-700: #067647; //success-700
+$utility-success-800: #085d3a; //success-800
+$utility-success-900: #074d31; //success-900
+
+$utility-error-700: #b42318; //error-700
+$utility-error-800: #912018; //error-800
+
+$utility-warning-300: #fec84b; //warning-300
+$utility-warning-700: #b54708; //warning-700
+$utility-warning-800: #93370d; //warning-800
+
+// my variables
+$color-focus-outline: #2e90fa3d;
+$color-danger-outline: #f044383d;
+$color-success-outline: #07945533;
+$color-warning-outline: #f7900933;
+$color-accent-outline: #2e90fa26;
+$bg-primary-solid-outline: #26272b33;
+$bg-secondary_hover-outline: #98a2b333;
+
+//variables
+$gray-900: #1a1a1e; //rgba(26, 26, 30, 1)
+$brand-600: #1570ef; //rgba(21, 112, 239, 1)
+$brand-200: #b2ddff; //rgba(178, 221, 255, 1)
+$gray-200: #e4e4e7; //rgba(228, 228, 231, 1)
+$brand-50: #eff8ff; //rgba(239, 248, 255, 1)
+$gray-300: #d1d1d6; //rgba(209, 209, 214, 1)
+$gray-50: #fafafa; //rgba(250, 250, 250, 1)
+$white: #ffffff; //rgba(255, 255, 255, 1)
+$gray-100: #f2f2f2; //rgba(242, 242, 242, 1)
+$gray-500: #70707b; //rgba(112, 112, 123, 1)
+$gray-400: #a0a0ab; //rgba(160, 160, 171, 1)
+$gray-600: #51525c; //rgba(81, 82, 92, 1)
+$brand-300: #84caff; //rgba(132, 202, 255, 1)
+$error-600: #d92d20; //rgba(217, 45, 32, 1)
+$error-300: #fda29b; //rgba(253, 162, 155, 1)
+$gray-700: #3f3f46; //rgba(63, 63, 70, 1)
+$gray-600: #51525c; //rgba(81, 82, 92, 1)
+
+// for TODO
+$todo-bg-accent: #646ff0;
+$todo-bg-2: #ecedf6;
+$todo-color-title: #646681;
+$todo-white: #fff;
+$todo-bg-select: #cccdde;

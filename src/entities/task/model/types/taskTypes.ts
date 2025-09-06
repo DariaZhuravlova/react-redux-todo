@@ -1,0 +1,10 @@
+export interface ITask {
+    id: string;
+    text: string;
+    completed: boolean;
+    date: string;
+}
+
+export type TaskStateType = {
+    tasks: ITask[];
+};
